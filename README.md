@@ -5,8 +5,7 @@ This project implements the oAuth2.0 protocol, a token based authentication syst
 It uses an authentication server to store and manage user credentials and sessions according to the oAuth2.0 protocol.
 It then demos a full stack application utilizing oAuth with a React front-end served on an express.js back-end.
 For demonstration purposes, access tokens duration is 10s and refresh token duration is 60s.
-
-![](../../../Downloads/Screenshot 2023-11-17 at 5.07.02 PM.png)  
+![](images/oAuth_high_level.png)
 
 ## Implementation Details
 ### Auth Server
@@ -19,7 +18,7 @@ When the access token expires, the refresh token is proof of authorization from 
 When both tokens have expired, the user is required to re-authenticate with their email and password.  
 #### Languages: TypeScript
 #### Modules: Express.js, cors, helmet, jsonwebtoken, mocha/chai 
-![](../../../Downloads/Screenshot 2023-11-17 at 5.10.37 PM.png)
+![](images/auth_uml.png)
   
 ### User Table
 The user table is a database that stores user credentials. These credentials including an email, password, privilege level, and refresh token.
@@ -39,7 +38,7 @@ In the case of user protected data, a custom middleware function is used to chec
 This Authorization header contains the access token required to prove that the client is authorized to access their protected data.
 #### Languages: TypeScript
 #### Modules: Express.js, cors, helmet  
-![](../../../Downloads/Screenshot 2023-11-18 at 9.19.34 PM.png)
+![](images/backend_uml.png)
 
 ### Frontend
 The frontend is the user's interface for interacting with the application. 

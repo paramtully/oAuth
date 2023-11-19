@@ -1,0 +1,44 @@
+{
+  "name": "db",
+  "version": "1.0.0",
+  "description": "handles database interactions for auth server",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai-as-promised": "^7.1.6",
+    "@types/cors": "^2.8.16",
+    "@types/jsonwebtoken": "^9.0.2",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@tsconfig/node16": "^16.1.1",
+    "@types/bcrypt": "^5.0.0",
+    "@types/chai": "^4.3.5",
+    "@types/express": "^4.17.17",
+    "@types/fs-extra": "^11.0.1",
+    "@types/jszip": "^3.4.1",
+    "@types/mocha": "^10.0.1",
+    "bcrypt": "^5.1.1",
+    "chai": "^4.3.8",
+    "chai-as-promised": "^7.1.1",
+    "chai-http": "^4.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "esm": "^3.2.25",
+    "express": "^4.18.2",
+    "fix-esm": "^1.0.1",
+    "fs-extra": "^11.1.1",
+    "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.1",
+    "jszip": "^3.10.1",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "valid-filename": "^4.0.0"
+  },
+  "scripts": {
+    "test": "mocha --require ts-node/register --timeout 10000 test/*.spec.ts",
+    "dev": "nodemon --ignore persist server/Server.ts",
+    "start": "ts-node --transpile-only server/Server.ts"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "demo backend to use with auth server",
+  "main": "index.js",
+  "author": "Param Tully",
+  "license": "MIT",
+  "dependencies": {
+    "@tsconfig/node16": "^16.1.1",
+    "@types/chai": "^4.3.9",
+    "@types/eslint": "^8.44.6",
+    "@types/express": "^4.17.21",
+    "@types/fs-extra": "^11.0.3",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/mocha": "^10.0.3",
+    "@types/typescript": "^2.0.0",
+    "chai": "^4.3.10",
+    "chai-as-promised": "^7.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.53.0",
+    "express": "^4.18.2",
+    "fs-extra": "^11.1.1",
+    "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.16"
+  },
+  "scripts": {
+    "test": "mocha --require ts-node/register --timeout 10000 test/*.spec.ts",
+    "dev": "nodemon server/Server.ts",
+    "start": "ts-node --transpile-only server/Server.ts"
+  }
+}
